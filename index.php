@@ -5,8 +5,6 @@
 		<meta name="description" content="Check Your Current IP Address" />
 <meta name="keywords" content="IP Address , IP , Check Your IP , IP-Address , current ip  " />
 
-		<meta name="Date" content="2008" />
-		<meta name="Distribution" content="Copyright 2003-2010 ." />
 		<title> | Your Current IP Address |</title>
 		<link href="style.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="js.js"></script>
