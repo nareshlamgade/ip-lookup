@@ -1,7 +1,44 @@
-body{font-family:"Trebuchet MS",sans;text-align:center;}
-h1{font-size:4em;color:#6a3;}h2{font-size:2em;color:#47c}h3{font-size:1em;color:#999}
-small{font-size:.3em;color:#555}
-a{color:#47c;text-decoration:none}
-a:hover{color:#6a3}
+body
+{font-family:"Trebuchet MS",sans;
+text-align:center;
+  
+}
+
+h1
+{
+  font-size:4em;
+  color:#6a3;
+  
+}
+h2
+{
+  font-size:2em;
+  color:#47c;
+  
+}
+h3
+{
+  font-size:1em;
+  color:#999;
+  
+}
+small
+{
+  font-size:.3em;
+  color:#555;
+  
+}
+a
+{
+  color:#47c;
+  text-decoration:none;
+  
+}
+
+a:hover
+{
+  color:#6a3;
+  
+}
 #content {width:700px;margin:0 auto;}
 #more{text-align:left;font-size:.8em;}
