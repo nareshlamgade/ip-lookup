@@ -3,7 +3,7 @@
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="Check Your Current IP Address" />
-<meta name="keywords" content="IP Address , IP , Check Your IP , IP-Address , current ip  " />
+		<meta name="keywords" content="IP Address , IP , Check Your IP , IP-Address , current ip  " />
 
 		<title> | Your Current IP Address |</title>
 		<link href="style.css" type="text/css" rel="stylesheet">
@@ -11,24 +11,24 @@
 
 	</head>
 	<body>
-<div id="content">
+	<div id="content">
 		<h2>Your Current IP Address Is</h2>
 <?php
-if ($_SERVER["HTTP_X_FORWARDED_FOR"] != ""){
-     $IP = $_SERVER["HTTP_X_FORWARDED_FOR"];
-     $proxy = $_SERVER["REMOTE_ADDR"];
-     $host = @gethostbyaddr($_SERVER["HTTP_X_FORWARDED_FOR"]);
+	if (getenv("HTTP_X_FORWARDED_FOR") != ""){
+     $IP = getenv("HTTP_X_FORWARDED_FOR");
+     $proxy = getenv("REMOTE_ADDR");
+     $host = @gethostbyaddr(getenv("HTTP_X_FORWARDED_FOR"));
 }else{
-     $IP = $_SERVER["REMOTE_ADDR"];
-     $host = @gethostbyaddr($_SERVER["REMOTE_ADDR"]);
+     $IP = getenv("REMOTE_ADDR");
+     $host = @gethostbyaddr(getenv("REMOTE_ADDR"));
 }
 ?>		
 		<h1><?=$IP;?><br /><small><?=$host;?><br><? echo ($proxy)?$proxy:'';?></small></h1>
 		<div id="more">
 <?php
-$k = array(user_agent=>HTTP_USER_AGENT,remote_port=>REMOTE_PORT,request_method=>REQUEST_METHOD,protocol=>SERVER_PROTOCOL);
-foreach ($k as $h=>$v)echo "<b>".str_replace("_"," ",$h)."</b> : $_SERVER[$v]<br>";
-?>
+	$k = array(user_agent=>HTTP_USER_AGENT,remote_port=>REMOTE_PORT,request_method=>REQUEST_METHOD,protocol=>SERVER_PROTOCOL);
+	foreach ($k as $h=>$v)echo "<b>".str_replace("_"," ",$h)."</b> : $_SERVER[$v]<br>";
+	?>
 		</div>
 		
 	</div>
